@@ -13,6 +13,6 @@ class ImageUploader < CarrierWave::Uploader::Base
       image.auto_orient
     end
   end
-
-  process :auto
+  # 
+  # process :auto
 end

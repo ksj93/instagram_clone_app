@@ -6,5 +6,9 @@
   <%= image_tag "default.jpg", alt: "user-icon", size: "200", class: "user-icon" %>
 <% end %>
 <p>メールアドレス: <%= @user.email %></p>
-<p><%= link_to 'list' , feeds_path %></p>
+<p><%= link_to "new upload", new_feed_path %></p>
+<p>
+<a><%= link_to 'feed list' , feeds_path %></a>
+<a><%= link_to "favorites list", favorites_path %></a>
+</p>
 <p><%= link_to 'profile_image' , edit_user_path %></p>

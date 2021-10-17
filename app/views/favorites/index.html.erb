@@ -1,0 +1,26 @@
+<h1>Favorites</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Image</th>
+      <th>Content</th>
+      <th>Uploader</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @favorites.each do |f| %>
+      <tr>
+        <td><%= f.feed.image.to_s.truncate(20) %></td>
+        <td><%= f.feed.content %></td>
+        <td><%= f.feed.user.name %></td>
+        <td><%= link_to 'Show', f.feed %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'list', feeds_path %>

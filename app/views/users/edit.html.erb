@@ -7,8 +7,12 @@
   <% end %>
 </div>
 <br>
-<div>
-  <button type="button" class="btn btn-outline-secondary rounded-pill">
+<%= form_with(model: @user, local: true) do |f| %>
+  <div class="field">
+    <%= f.label :image %>
     <%= file_field :image, accept: 'image/jpeg,image/gif,image/png', class: "image-select-btn" %>
-  </button>
-</div>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
