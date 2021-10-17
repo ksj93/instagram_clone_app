@@ -24,9 +24,10 @@ class FeedsController < ApplicationController
   def create
     @feed = Feed.new(feed_params)
     @feed.user_id = current_user.id
+    @feed_mail = current_user.email
     respond_to do |format|
       if @feed.save
-        FeedMailer.feed_mail(@feed.user).deliver
+        FeedMailer.feed_mail(current_user).deliver
         format.html { redirect_to @feed, notice: "Feed was successfully created." }
         format.json { render :show, status: :created, location: @feed }
       else
