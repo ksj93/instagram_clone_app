@@ -1,0 +1,14 @@
+<h2>profile_edit</h2><br>
+<div>
+  <% if @user.image? %>
+    <%= image_tag @user.image.url, class: "user-icon" %>
+  <% else %>
+    <%= image_tag "default.jpg", alt: "user-icon", size: "200", class: "user-icon" %>
+  <% end %>
+</div>
+<br>
+<div>
+  <button type="button" class="btn btn-outline-secondary rounded-pill">
+    <%= file_field :image, accept: 'image/jpeg,image/gif,image/png', class: "image-select-btn" %>
+  </button>
+</div>

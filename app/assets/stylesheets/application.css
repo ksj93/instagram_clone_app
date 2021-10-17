@@ -26,7 +26,7 @@
    padding: 0px;
  }
  header{
-   background-color: cornflowerblue;
+   background-color: mediumpurple;
    height: 150px;
    position: relative;
  }
@@ -39,7 +39,7 @@
    transform: translate(-50%,-50%);
  }
  footer{
-   background-color: cornflowerblue;
+   background-color: mediumpurple;
    position: relative;
    height: 100px;
    bottom: -500px;
@@ -56,10 +56,13 @@
  }
 .content_block{
   position: absolute;
-  top:50%;
+  top:60%;
   left: 50%;
   transform: translate(-50%,-50%);
   text-align: center;
-  color: cornflowerblue;
+  color: mediumpurple;
 
+}
+.user-icon {
+  border-radius: 100px;
 }
