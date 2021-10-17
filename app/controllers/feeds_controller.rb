@@ -20,7 +20,7 @@ class FeedsController < ApplicationController
   end
   def edit
     if @feed.user_id == current_user.id
-
+      
     else
       redirect_to feeds_path
     end
@@ -28,6 +28,7 @@ class FeedsController < ApplicationController
   def create
     @feed = Feed.new(feed_params)
     @feed.user_id = current_user.id
+    @feed_mail = current_user.email
     respond_to do |format|
       if @feed.save
         FeedMailer.feed_mail(current_user).deliver
@@ -62,7 +63,7 @@ class FeedsController < ApplicationController
     @feed = Feed.find(params[:id])
   end
   def feed_params
-    params.require(:feed).permit(:profile_image, :profile_image_cache,:content)
+    params.require(:feed).permit(:image, :image_cache,:content)
   end
 
 end

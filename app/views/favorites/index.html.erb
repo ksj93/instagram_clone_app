@@ -8,6 +8,7 @@
       <th colspan="3"></th>
     </tr>
   </thead>
+
   <tbody>
     <% @favorites.each do |f| %>
       <tr>
@@ -19,5 +20,7 @@
     <% end %>
   </tbody>
 </table>
+
 <br>
+
 <%= link_to 'list', feeds_path %>
