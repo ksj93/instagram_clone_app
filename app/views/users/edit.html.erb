@@ -1,16 +1,8 @@
 <h2>profile_edit</h2><br>
-<div>
-  <% if @user.image? %>
-    <%= image_tag @user.image.url, class: "user-icon" %>
-  <% else %>
-    <%= image_tag "default.jpg", alt: "user-icon", size: "200", class: "user-icon" %>
-  <% end %>
-</div>
-<br>
 <%= form_with(model: @user, local: true) do |f| %>
   <div class="field">
     <%= f.label :image %>
-    <%= file_field :image, accept: 'image/jpeg,image/gif,image/png', class: "image-select-btn" %>
+    <%= f.file_field :image %>
   </div>
   <div class="actions">
     <%= f.submit %>

@@ -1,6 +1,5 @@
 class FeedsController < ApplicationController
   before_action :set_feed, only: %i[ show edit update destroy ]
-
   def index
     @feeds = Feed.all
   end
@@ -20,6 +19,11 @@ class FeedsController < ApplicationController
     render :new if @feed.invalid?
   end
   def edit
+    if @feed.user_id == current_user.id
+      
+    else
+      redirect_to feeds_path
+    end
   end
   def create
     @feed = Feed.new(feed_params)
@@ -61,4 +65,5 @@ class FeedsController < ApplicationController
   def feed_params
     params.require(:feed).permit(:image, :image_cache,:content)
   end
+
 end
