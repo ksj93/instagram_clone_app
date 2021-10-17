@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+<p class = "image_file">
+  <strong>Image:</strong>
+  <p><%= image_tag @feed.image.url ,:size => '300x150' %><p>
+</p>
+<p>Content: <%= @feed.content %></p>
+<p>Uploader: <%= @feed.user.name %></p>
+<%= link_to 'Edit', edit_feed_path(@feed) %> |
+<%= link_to 'Back', feeds_path %>
