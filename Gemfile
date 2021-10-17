@@ -15,6 +15,7 @@ group :development, :test do
   gem 'pry-rails'
 end
 group :development do
+  gem 'letter_opener_web'
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'spring'
@@ -29,3 +30,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'bcrypt'
+gem 'rexml'

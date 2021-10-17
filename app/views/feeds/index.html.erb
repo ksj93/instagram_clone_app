@@ -2,8 +2,8 @@
 <table>
   <thead>
     <tr>
-      <th>Image</th>
-      <th>Content</th>
+      <th>Image </th>
+      <th>Content </th>
       <th>Uploader</th>
       <th colspan="3"></th>
     </tr>
@@ -15,8 +15,8 @@
         <td><%= feed.image.to_s.truncate(20) %></td>
         <td><%= feed.content %></td>
         <td><%= feed.user.name %></td>
-        <td><%= link_to 'Show', feed %></td>
-        <td><%= link_to 'Edit', edit_feed_path(feed) %></td>
+        <td><%= link_to 'Show ', feed %></td>
+        <td><%= link_to 'Edit ', edit_feed_path(feed) %></td>
         <td><%= link_to 'Destroy', feed, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>

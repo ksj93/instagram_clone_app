@@ -15,9 +15,9 @@
       </header>
       <article class="content_block">
         <% if logged_in? %>
-          <%= link_to "Profile", user_path(current_user.id) %>
-          <%= link_to "feed", feeds_path %>
-          <%= link_to "favorites", favorites_path %>
+          <%= link_to "Profile", user_path(current_user.id) %> |
+          <%= link_to "feed", feeds_path %> |
+          <%= link_to "favorites", favorites_path %> |
           <%= link_to "Logout", session_path(current_user.id), method: :delete %>
         <% else %>
           <%= link_to "Sign up", new_user_path %>
